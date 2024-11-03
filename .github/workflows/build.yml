@@ -74,4 +74,4 @@ jobs:
           push: true
           # Pushing this to assignment repo
           # uniquely tagged with the current commit hash.
-          tags: Kibilydi/devops-assignment-2-3-Kibilydi:${{ github.sha }}
+          tags: kibilydi/devops-assignment-2-3-kibilydi:${{ github.sha }}
