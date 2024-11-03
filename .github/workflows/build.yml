@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 11
       # Run the command to build the application
       - name: Execute Gradle build
         run: |
@@ -35,9 +35,7 @@ jobs:
           ./gradlew build
       # Whatever the jar's name is, rename it to app.jar
       - name: Copy Jar file
-        # In ./build/libs find any file with the jar extension exluding those with pkain in the name
-        # Copy it to the current directory
-        run: mv ./build/libs/*.jar ./app.jar
+        run: mv build/libs/$(ls build/libs) app.jar
       # Make the jar accessible to the next job
       - uses: actions/upload-artifact@master
         with:
@@ -74,6 +72,6 @@ jobs:
           # context: . because we are working in the current directory
           context: .
           push: true
-          # Pushing this to the wsu-gh-actions-demo repo in the sakahle project on DockerHub
+          # Pushing this to assignment repo
           # uniquely tagged with the current commit hash.
-          tags: wsukduncan/workpro-service:${{ github.sha }}
+          tags: Kibilydi/devops-assignment-2-3-Kibilydi:${{ github.sha }}
