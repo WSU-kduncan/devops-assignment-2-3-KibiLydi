@@ -11,7 +11,7 @@ This part of the yaml is the compilation process for the java project, obviously
 This section first installs a fresh install of ubuntu, which will be used to run the docker image. The code has to make sure that the installation successfully completed before it makes an image; this has to be explicitly programmed in because jobs run in parallel by default. It creates the image using the credentials of the user's Dockerhub account, which have already been added as a Secret into the GitHub repository. It does this dynamically so that it will automatically change for the user running the action. After all this, it finally builds the image and pushes it to the specified GitHub repository.
 
 ## Link to DockerHub Repository
-[DockerHub - `YOURLASTNAME-WOPro-Service`](place link here)
+[DockerHub - `CLARK-WOPro-Service`](https://github.com/WSU-kduncan/devops-assignment-2-3-KibiLydi)
 
 ## Link to GitHub Actions Run Results Summary
-[Link to **working** workflow run results](sampleURL:https://github.com/WSU-kduncan/s24cicd-pattonsgirl/actions/runs/8726150186/job/23941797523)
+[Link to **working** workflow run results](https://github.com/WSU-kduncan/devops-assignment-2-3-KibiLydi/actions/runs/11654488394)
